@@ -1,9 +1,20 @@
-import React from 'react'
+"use client"
+import React, { useContext } from 'react'
 import styles from './page.module.css'
 import Form from '../components/form/Form'
 import { AiFillFacebook } from "react-icons/ai";
 import Image from 'next/image';
+import { AppContext } from '../components/Context';
+import { useRouter } from "next/navigation";
 const page = () => {
+  const router = useRouter();
+  const {start} = useContext(AppContext);
+  if(start===false){
+    router.push("/")
+  }
+  if(start ===true){
+
+  
   return (
     <div className={styles.login}>
       <div className={styles.logoOuter}>
@@ -39,6 +50,7 @@ const page = () => {
         <p className={styles.copyright}>© 2023 Instagram from Meta</p>
     </div>
   )
+  }
 }
 
 export default page

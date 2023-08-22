@@ -13,14 +13,16 @@ export default function Home() {
     setStart(!start);
     console.log(start);
   }
-  if(start == true){
+  if(start === true){
     router.push("/login");
   }
-  return (
-    <main className={styles.main}>
-      <h1 className={styles.heading}>The Friendship Test</h1>
-      <p className={styles.para}>*Get your Friendship score <span className={styles.name}>Yash</span> now*</p>
-      <button onClick={handleStart} className={styles.mainButton}>Start the quiz</button>
-    </main>
-  )
+  if(start ===false){
+    return (
+      <main className={styles.main}>
+        <h1 className={styles.heading}>The Friendship Test</h1>
+        <p className={styles.para}>*Get your Friendship score <span className={styles.name}>Yash</span> now*</p>
+        <button onClick={handleStart} className={styles.mainButton}>Start the quiz</button>
+      </main>
+    )
+  }
 }
