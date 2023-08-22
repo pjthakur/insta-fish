@@ -25,6 +25,17 @@ const page = () => {
           <img src='https://static.cdninstagram.com/rsrc.php/v3/yz/r/c5Rp7Ym-Klz.png' className={styles.goog}/>
           <img src='https://static.cdninstagram.com/rsrc.php/v3/yu/r/EHY6QnZYdNX.png' className={styles.goog}/>
         </div>
+        <div className={styles.foot}>
+          <p>Meta</p>
+          <p>About</p>
+          <p>Blog</p>
+          <p>Jobs</p>
+          <p>Help</p>
+          <p>API</p>
+          <p>Privacy</p>
+          <p>Terms</p>
+        </div>
+        <p className={styles.copyright}>© 2023 Instagram from Meta</p>
     </div>
   )
 }
